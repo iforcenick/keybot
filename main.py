@@ -47,6 +47,8 @@ def jiggle_mouse():
     for _ in range(5):  # Do 5 to 10 jiggles
         tx = x + random.randint(-100, 100)
         ty = y + random.randint(-100, 100)
+        tx = max(1, min(tx, pyautogui.size().width - 1))
+        ty = max(1, min(ty, pyautogui.size().height - 1))
         pyautogui.moveTo(tx, ty, duration=0.2)
         time.sleep(random.uniform(0.1, 0.3))
         current_mouse_position = pyautogui.position()

@@ -7,15 +7,15 @@ from datetime import datetime
 # Interval in seconds to check for inactivity
 CHECK_INTERVAL = 0.1
 # Inactivity timeout in seconds before moving the mouse (2 hours)
-# INACTIVITY_TIMEOUT = 2 * 60
-INACTIVITY_TIMEOUT = 10
+INACTIVITY_TIMEOUT = 2 * 60
+# INACTIVITY_TIMEOUT = 10
 
 # Track the last time the mouse was moved by the user and by the script
 last_mouse_position = pyautogui.position()
 last_active_time = time.time()
 
-WORK_START_HOUR = 9
-WORK_END_HOUR = 23  # 5:00 PM in 24-hour format
+WORK_START_HOUR = 7
+WORK_END_HOUR = 19  # 5:00 PM in 24-hour format
 
 def within_working_hours():
     now = datetime.now()
